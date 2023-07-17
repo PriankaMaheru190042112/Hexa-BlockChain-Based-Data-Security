@@ -21,5 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("",include('HexaApp.urls')),
     path('auth/', include('authentication.urls')),
-    path('Owner/',include('Owner.urls'))
+    path('owner/',include('Owner.urls'))
 ]
