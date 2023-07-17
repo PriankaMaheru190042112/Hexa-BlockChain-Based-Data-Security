@@ -19,7 +19,7 @@ def owner_register(request):
             form.save()
             uobj = User.objects.get(username=username)           
             uobj.save()
-            return redirect('adminlogin')
+            return redirect('owner')
     context = {'form': form }
     return render(request, 'OwnerRegistration.html', context)
 
@@ -31,9 +31,9 @@ def owner_login(request):
             password = request.POST.get('password')
 
             user = authenticate(request, username=username, password = password)
-            if (user is not None) and (user.is_admin) == 1:
+            if (user is not None) and (user.is_data_owner) == 1:
                 login(request, user)
-                return redirect('/Owner/')
+                return redirect('/owner/')
             else:
                 messages.info(request, "Username or Password is incorrect.")
         context = {}
