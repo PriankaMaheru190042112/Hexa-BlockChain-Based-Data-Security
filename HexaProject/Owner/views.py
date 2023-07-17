@@ -8,21 +8,22 @@ def owner_home(request):
 
 def upload_document(request):
     if request.method == 'POST':
+        print("Dhukse")
         form = DocumentForm(request.POST, request.FILES)
-        file = request.POST['file']
-        owner = request.user
-        print(file)
-        print(owner)
         if form.is_valid():
-            owner = request.user
-            print(owner)
-            file = form.cleaned_data['file']
-            Document.objects.create(owner=owner, file=file)
-            return redirect('document_list')  # Redirect to a success page
+            print("Dhukse")
+            user = request.user
+            file1 = request.FILES['file']
+            # Process the file as needed (e.g., save it, manipulate it, etc.)
+            # Example: Save the file to a Document model
+            document = Document(owner=user,file=file1)
+            document.save()
+            return redirect('owner_home')  # Redirect to a success page
     else:
+        print("Dhukse NAAAA")
         form = DocumentForm()
     
-    return render(request, 'UploadDocument.html', {'form': form})
+    return render(request, 'UploadDocument.html', {'form': 'form'})
 
 def document_list(request):
     documents = Document.objects.filter(owner=request.user)
