@@ -9,8 +9,13 @@ def owner_home(request):
 def upload_document(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
+        file = request.POST['file']
+        owner = request.user
+        print(file)
+        print(owner)
         if form.is_valid():
             owner = request.user
+            print(owner)
             file = form.cleaned_data['file']
             Document.objects.create(owner=owner, file=file)
             return redirect('document_list')  # Redirect to a success page

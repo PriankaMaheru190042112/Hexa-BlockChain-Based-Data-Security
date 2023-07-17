@@ -2,10 +2,16 @@
 <html>
 <head>
     <title>File Upload Form</title>
+    <script>
+        function showUploadMessage() {
+            alert("File uploaded successfully!");
+        }
+    </script>
 </head>
 <body>
     <h1>File Upload Form</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <form action="/owner/" method="post" enctype="multipart/form-data" onsubmit="showUploadMessage()">
+        {% csrf_token %} 
         <input type="file" name="file" accept=".txt, .pdf, .doc, .docx">
         <input type="submit" value="Upload">
     </form>
