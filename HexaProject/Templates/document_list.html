@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document List</title>
+</head>
+<body>
+    <h1>Document List</h1>
+    {% if documents %}
+        <ul>
+        {% for document in documents %}
+            <li>{{ document.file.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents available.</p>
+    {% endif %}
+</body>
+</html>
