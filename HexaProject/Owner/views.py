@@ -4,6 +4,7 @@ from .models import Document
 from .encryption import encrypt_file
 from cryptography.fernet import Fernet
 from authentication.models import User
+from django.utils import timezone
 
 # Create your views here.
 def owner_home(request):
@@ -42,6 +43,14 @@ def document_list(request):
 def send_document(request):
     if request.method == 'POST':
         print("hi")
+        send_user = request.user
+        document = request.POST.get('document')
+        receive_user = request.POST.get('user')
+        hash_key = request.POST.get('hash_key')
+        post_time = timezone.now()
+        operation = request.POST.get('operation')
+
+        
     else : 
         documents = Document.objects.filter(owner=request.user)
         users = User.objects.filter(is_analyst=True)
