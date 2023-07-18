@@ -24,4 +24,5 @@ urlpatterns = [
     path('owner/',include('Owner.urls')),
     path('analyst/',include('Analyst.urls')),
     path('regulator/',include('Regulator.urls')),
+    path('ledger/',include('blockchain.urls')),
 ]

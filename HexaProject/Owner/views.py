@@ -7,6 +7,7 @@ from .encryption import encrypt_file, decrypt_file
 from cryptography.fernet import Fernet
 from authentication.models import User
 from django.utils import timezone
+from blockchain.models import  Blockchain, BlockchainManager, hashGenerator
 
 # Create your views here.
 def owner_home(request):
@@ -57,9 +58,23 @@ def send_document(request):
         file1 = decrypt_file(document,key=hash_key)
         read_only_doc = ReadOnlyDocument(owner=send_user,file=file1)
         read_only_doc.save()
+        data1 = {
+            'send_user' : send_user,
+            'receive_user' : receive_user,
+            'document' : document,
+            'operation' : operation,
+            'post_time' : post_time
+        }
+        blocks = Blockchain.objects.filter()
+        print("1",blocks)
+        print(blocks[len(blocks)-1])
+        prev_block = blocks[len(blocks)-1]
+        curr_hash = hashGenerator('data')
+        prev_hash = prev_block.hash
+        b = Blockchain(data=data1, hash=curr_hash, prev_hash=prev_hash)
+        b.save()
         return redirect('owner') 
 
-        
     else : 
         documents = Document.objects.filter(owner=request.user)
         users = User.objects.filter(is_analyst=True)
