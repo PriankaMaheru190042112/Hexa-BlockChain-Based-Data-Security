@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "Owner",
     "Analyst",
     "Regulator",
+    "blockchain",
 ]
 
 MIDDLEWARE = [
