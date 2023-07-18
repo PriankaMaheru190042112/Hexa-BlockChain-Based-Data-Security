@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "HexaApp",
     "authentication",
     "Owner",
+    "Analyst",
+    "Regulator",
 ]
 
 MIDDLEWARE = [

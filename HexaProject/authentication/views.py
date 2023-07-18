@@ -45,3 +45,66 @@ def owner_login(request):
 
 def home(request):
     return render(request , 'LoginPage.html')
+
+
+def regulator_register(request):
+    form = CreateUserForm()
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        username = request.POST.get('username')
+        
+        if form.is_valid():
+            form.save()
+            uobj = User.objects.get(username=username)           
+            uobj.save()
+            return redirect('/regulator/')
+    context = {'form': form }
+    return render(request, 'Regulator/RegulatorRegistration.html',context)
+
+
+
+def regulator_login(request):
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+
+            user = authenticate(request, username=username, password = password)
+            if (user is not None) and (user.is_regulators) == 1:
+                login(request, user)
+                return redirect('/regulator/')
+            else:
+                messages.info(request, "Username or Password is incorrect.")
+        context = {}
+        return render(request, 'Regulator/RegulatorLogin.html',context)
+
+def analyst_register(request):
+    form = CreateUserForm()
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        username = request.POST.get('username')
+        
+        if form.is_valid():
+            form.save()
+            uobj = User.objects.get(username=username) 
+            uobj.is_analyst=1  
+            uobj.is_regulators=0                  
+            uobj.save()
+            return redirect('/analyst/')
+    context = {'form': form }
+    return render(request, 'Analyst/AnalystRegistration.html',context)
+
+
+
+def analyst_login(request):
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+
+            user = authenticate(request, username=username, password = password)
+            if (user is not None) and (user.is_analyst) == 1:
+                login(request, user)
+                return redirect('/analyst/')
+            else:
+                messages.info(request, "Username or Password is incorrect.")
+        context = {}
+        return render(request, 'Analyst/AnalystLogin.html',context)
