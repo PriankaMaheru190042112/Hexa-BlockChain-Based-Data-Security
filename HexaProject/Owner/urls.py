@@ -6,4 +6,5 @@ from django.conf import settings
 urlpatterns = [
     path('', views.owner_home, name= 'owner_home'),
     path('uploadFiles/', views.upload_document),
+    path('documentList/', views.document_list)
 ]
