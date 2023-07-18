@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from Analyst.models import ReadOnlyDocument
 from .forms import DocumentForm
 from .models import Document
 from .encryption import encrypt_file, decrypt_file
@@ -52,7 +54,9 @@ def send_document(request):
         idx = 0
         print(document)
 
-        decrypt_file(document,key=hash_key)
+        file1 = decrypt_file(document,key=hash_key)
+        read_only_doc = ReadOnlyDocument(owner=send_user,file=file1)
+        read_only_doc.save()
         return redirect('owner') 
 
         
