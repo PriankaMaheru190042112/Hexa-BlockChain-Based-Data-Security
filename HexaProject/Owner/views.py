@@ -69,7 +69,7 @@ def send_document(request):
         print("1",blocks)
         print(blocks[len(blocks)-1])
         prev_block = blocks[len(blocks)-1]
-        curr_hash = hashGenerator('data')
+        curr_hash = hashGenerator(data1['document'])
         prev_hash = prev_block.hash
         b = Blockchain(data=data1, hash=curr_hash, prev_hash=prev_hash)
         b.save()
