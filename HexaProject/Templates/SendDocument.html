@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Document</title>
+</head>
+<body>
+    <h1>Send Document</h1>
+    <form method="post" action="/send_document">
+        {% csrf_token %}
+        
+        <label for="document">Document:</label>
+        <select id="document" name="document" required>
+            <option value="">Select User</option>
+            {% for doc in documents %}
+                    <option value="{{ doc.file }}">{{ doc.file }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="user">User:</label>
+        <select id="user" name="user" required>
+            <option value="">Select User</option>
+            {% for user in users %}
+                {% if user.is_analyst %}
+                    <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="hash_key">Hash Key:</label>
+        <input type="text" id="hash_key" name="hash_key" required>
+        <br><br>
+
+        <button type="submit">Send Document</button>
+    </form>
+</body>
+</html>

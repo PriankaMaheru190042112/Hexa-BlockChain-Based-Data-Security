@@ -3,6 +3,7 @@ from .forms import DocumentForm
 from .models import Document
 from .encryption import encrypt_file
 from cryptography.fernet import Fernet
+from authentication.models import User
 
 # Create your views here.
 def owner_home(request):
@@ -37,3 +38,15 @@ def document_list(request):
     documents = Document.objects.filter(owner=request.user)
     return render(request, 'document_list.html', {'documents': documents})
 
+
+def send_document(request):
+    if request.method == 'POST':
+        print("hi")
+    else : 
+        documents = Document.objects.filter(owner=request.user)
+        users = User.objects.filter(is_analyst=True)
+        context = {
+            'documents' : documents,
+            'users': users
+        }
+        return render(request, 'SendDocument.html', context)
