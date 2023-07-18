@@ -24,7 +24,7 @@ def upload_document(request):
             enc_file = encrypt_file(file_path, key)
             # Process the file as needed (e.g., save it, manipulate it, etc.)
             # Example: Save the file to a Document model
-            document = Document(owner=user,file=enc_file)
+            document = Document(owner=user,file=enc_file, key=key)
             document.save()
             return redirect('owner_home')  # Redirect to a success page
     else:
