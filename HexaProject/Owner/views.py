@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import DocumentForm
 from .models import Document
-from .encryption import encrypt_file
+from .encryption import encrypt_file, decrypt_file
 from cryptography.fernet import Fernet
 from authentication.models import User
 from django.utils import timezone
@@ -28,7 +28,7 @@ def upload_document(request):
             # Example: Save the file to a Document model
             document = Document(owner=user,file=enc_file, key=key)
             document.save()
-            return redirect('owner_home')  # Redirect to a success page
+            return redirect('owner')  # Redirect to a success page
     else:
         print("Dhukse NAAAA")
         form = DocumentForm()
@@ -49,6 +49,11 @@ def send_document(request):
         hash_key = request.POST.get('hash_key')
         post_time = timezone.now()
         operation = request.POST.get('operation')
+        idx = 0
+        print(document)
+
+        decrypt_file(document,key=hash_key)
+        return redirect('owner') 
 
         
     else : 

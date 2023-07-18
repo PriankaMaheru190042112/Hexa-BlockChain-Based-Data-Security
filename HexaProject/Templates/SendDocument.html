@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Send Document</h1>
-    <form method="post" action="/send_document">
+    <form method="post" action="/owner/sendDocument/">
         {% csrf_token %}
         
         <label for="document">Document:</label>
@@ -30,7 +30,7 @@
 
         <label for="hash_key">Hash Key:</label>
         <input type="text" id="hash_key" name="hash_key" required>
-        <label for="operation">Hash Key:</label>
+        <label for="operation">Operation:</label>
         <input type="text" id="operation" name="operation" required>
         <br><br>
 
