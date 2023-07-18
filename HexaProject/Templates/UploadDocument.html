@@ -74,7 +74,7 @@
             <form action="/owner/uploadFiles/" method="post" enctype="multipart/form-data" onsubmit="showUploadMessage()">
                 {% csrf_token %} 
                 <input type="file" name="file" accept=".txt, .pdf, .doc, .docx">
-                <input type="submit" value="Upload">
+                <input type="submit" value="Upload" style="color: black;">
             </form>
 
            {% comment %} form ends{% endcomment %}
