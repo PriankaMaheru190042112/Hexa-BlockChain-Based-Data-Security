@@ -62,18 +62,22 @@
       </div></header>
     <section class="u-clearfix u-custom-color-6 u-section-1" id="sec-b519">
         <div class="u-clearfix u-sheet u-sheet-1">
-
+          {% if blocks %}
             {% comment %} eikhane loop korbi {% endcomment %}
-
-            <div class="u-border-3 u-border-grey-40 u-container-style u-group u-palette-1-base u-radius-35 u-shape-round u-group-1">
-              <div class="u-container-layout u-container-layout-1">
-                <p class="u-align-center u-text u-text-1">Sample text. Click to select the Text Element.</p>
-              </div>
-            </div><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="{% static 'images/2989995-def088ca.png' %}" alt=""></span>
-            <p class="u-text u-text-default u-text-2">Previous Hash:&nbsp;Sample text. Click to select the Text Element.<br>Hash:&nbsp;Sample text. Click to select the Text Element.
-            </p>
+            {% for block in blocks %}
             
+            <div class="u-border-3 u-border-grey-40 u-container-style u-group u-palette-1-base u-radius-35 u-shape-round u-group-1">
+            
+              </p>
+              <div class="u-container-layout u-container-layout-1">
+                <p class="u-align-center u-text u-text-1">{{  block.data  }}</p>
+              </div>
+              <p class="u-text u-text-default u-text-2">PrevHash:&nbsp;{{block.prev_hash}} <br>Hash:&nbsp;{{block.hash}}
+            </div><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="{% static 'images/2989995-def088ca.png' %}" alt=""></span>
+            
+              {% endfor %}
            {% comment %} etotuk porjnto {% endcomment %}
+           {% endif %}
           </div>
     </section>
     
