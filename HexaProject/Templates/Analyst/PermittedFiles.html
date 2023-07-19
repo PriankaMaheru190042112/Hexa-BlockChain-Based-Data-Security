@@ -101,7 +101,8 @@
                     <td>{{ file.file }}</td>
                     <td>
                         {% comment %} <embed src="{{ file.file }}" type="application/pdf" width="600" height="400" /> {% endcomment %}
-                       <a href=""> Click Here To See PDF <span style="margin-top:200px;"><i class="fa fa-external-link"></i></a>
+                       <a href="/analyst/download/"> Click Here To See PDF <span style="margin-top:200px;"><i class="fa fa-external-link"></i></a>
+                        {% comment %} <a href="{% url file.file %}">Download Document</a> {% endcomment %}
                         </span>
                     </td>
                 </tr>
