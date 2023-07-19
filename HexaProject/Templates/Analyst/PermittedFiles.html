@@ -9,14 +9,16 @@
         <thead>
             <tr>
                 <th>File Name</th>
-                <th>File URL</th>
+                <th>Preview</th>
             </tr>
         </thead>
         <tbody>
             {% for file in files %}
             <tr>
                 <td>{{ file.file }}</td>
-                {% comment %} <td><a href="{{ file.file_url }}">{{ file.file_name }}</a></td> {% endcomment %}
+                <td>
+                    <embed src="{{ file.file }}" type="application/pdf" width="600" height="400" />
+                </td>
             </tr>
             {% endfor %}
         </tbody>
