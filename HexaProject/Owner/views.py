@@ -54,9 +54,9 @@ def send_document(request):
         operation = request.POST.get('operation')
         idx = 0
         print(document)
-
+        reader1 = User.objects.filter(username=receive_user)
         file1 = decrypt_file(document,key=hash_key)
-        read_only_doc = ReadOnlyDocument(owner=send_user,file=file1)
+        read_only_doc = ReadOnlyDocument(reader=reader1[0],file=file1)
         read_only_doc.save()
         data1 = {
             'send_user' : send_user,
