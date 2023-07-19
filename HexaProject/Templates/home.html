@@ -18,7 +18,6 @@
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
     
     
-    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -61,7 +60,14 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="https://nicepage.com/c/text-button-html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">lOGIN</a>
+        <div class="drop" style="position: relative; display: inline-block; float:right;" onmouseover="showMenu()" onmouseout="hideMenu()">
+          <a href="" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1"  onclick="toggleDropdown()">lOGIN</a>
+          <ul id="dropdownMenu" style="width:250px; position: absolute; top: 100%; left: 0; background-color: #f1f1f1; padding: 8px 0; list-style-type: none; margin: 0; display: none;">
+            <li><a href="/auth/OwnerLogin/" style="color: #333; text-decoration: none; padding: 8px 16px; display: block;">Data Owner</a></li>
+            <li><a href="/auth/AnalystLogin/" style="color: #333; text-decoration: none; padding: 8px 16px; display: block;">Analyst</a></li>
+            <li><a href="/auth/RegulatorLogin/" style="color: #333; text-decoration: none; padding: 8px 16px; display: block;">Regulator</a></li>
+          </ul>
+        </div>
       </div></header>
     <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_fe38" data-href="{% url 'home' %}" data-image-width="612" data-image-height="431">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -104,6 +110,16 @@
         </div>
         <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-1">All Rights Reserved © 2023</p>
       </div></footer>
-
+      <script>
+        function showMenu() {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.style.display = "block";
+        }
+      
+        function hideMenu() {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.style.display = "none";
+        }
+      </script>
   
 </body></html>

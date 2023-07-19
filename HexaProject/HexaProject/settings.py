@@ -114,7 +114,6 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'authentication.User'
 
-ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

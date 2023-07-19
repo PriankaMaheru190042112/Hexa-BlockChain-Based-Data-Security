@@ -66,14 +66,16 @@
             {% comment %} eikhane loop korbi {% endcomment %}
             {% for block in blocks %}
             
-            <div class="u-border-3 u-border-grey-40 u-container-style u-group u-palette-1-base u-radius-35 u-shape-round u-group-1">
-            
-              </p>
-              <div class="u-container-layout u-container-layout-1">
+            <div class="u-border-3 u-border-grey-40 u-container-style u-group u-palette-1-base u-radius-35 u-shape-round u-group-1" style="margin-top:10px;">
+              <div class="u-container-layout u-container-layout-1" style="padding:20px; text-align:center;">
                 <p class="u-align-center u-text u-text-1">{{  block.data  }}</p>
               </div>
-              <p class="u-text u-text-default u-text-2">PrevHash:&nbsp;{{block.prev_hash}} <br>Hash:&nbsp;{{block.hash}}
-            </div><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="{% static 'images/2989995-def088ca.png' %}" alt=""></span>
+              <p class="u-text u-text-default u-text-2" style="margin-left: 80px">PrevHash:&nbsp;{{block.prev_hash}} <br>Hash:&nbsp;{{block.hash}}
+            </div>
+            {% if not forloop.last %}
+            <span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="{% static 'images/2989995-def088ca.png' %}" alt=""></span>
+
+            {% endif %}
             
               {% endfor %}
            {% comment %} etotuk porjnto {% endcomment %}
