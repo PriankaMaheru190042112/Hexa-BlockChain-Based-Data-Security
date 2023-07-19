@@ -7256,6 +7256,7 @@ section.u-image:not(.u-hover-box),
 }
 .u-body .u-sheet .u-sheet {
   width: 100% !important;
+  
 }
 .u-container-layout {
   position: relative;
@@ -42904,6 +42905,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-sheet-1 {
   min-height: 96px;
+
 }
 
 .u-header .u-image-1 {
