@@ -13,3 +13,6 @@ def ledger(request):
         print(block.__dict__)
     return render(request, 'blockchain/ledger.html')
 
+def logbook(request):
+    return render(request, 'blockchain/logbook.html')
+

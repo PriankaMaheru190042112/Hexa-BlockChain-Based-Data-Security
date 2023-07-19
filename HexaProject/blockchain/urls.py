@@ -5,5 +5,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.ledger, name= 'ledger'),
- 
+    path('logbook/', views.logbook, name='logbook'),
 ]
