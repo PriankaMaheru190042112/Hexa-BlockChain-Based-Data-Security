@@ -88,12 +88,12 @@
     <section class="u-align-center u-clearfix u-custom-color-6 u-section-1" src="" id="sec-d275">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 style="margin-top:100px">Send Document</h3>
-    <form method="post" action="/send_document" style="margin-top:40px;">
+    <form method="post" action="/owner/" style="margin-top:40px;">
         {% csrf_token %}
         
         <label for="document">Document:</label>
         <select id="document" name="document" style="color:black;" required>
-            <option value="" style="color:black;">Select User</option>
+            <option value="" style="color:black;">Select Document</option>
             {% for doc in documents %}
                     <option value="{{ doc.file }}" style="color:black;">{{ doc.file }}</option>
             {% endfor %}
