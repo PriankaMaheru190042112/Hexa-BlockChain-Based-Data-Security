@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Permitted Files</title>
+</head>
+<body>
+    <h1>Permitted Files</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>File URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+            <tr>
+                <td>{{ file.file }}</td>
+                {% comment %} <td><a href="{{ file.file_url }}">{{ file.file_name }}</a></td> {% endcomment %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

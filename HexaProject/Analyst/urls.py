@@ -6,5 +6,6 @@ from django.conf import settings
 urlpatterns = [
     path('', views.analyst_home, name= 'analyst'),
     path('viewPDF/', views.view_pdf),
+    path('permittedFiles/', views.permitted_files),
  
 ]
