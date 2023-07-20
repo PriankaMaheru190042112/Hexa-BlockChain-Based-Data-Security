@@ -25,4 +25,5 @@ urlpatterns = [
     path('analyst/',include('Analyst.urls')),
     path('regulator/',include('Regulator.urls')),
     path('ledger/',include('blockchain.urls')),
+    path('hexaBot/',include('chatbot.urls')),
 ]

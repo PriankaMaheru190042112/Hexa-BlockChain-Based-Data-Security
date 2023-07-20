@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "Analyst",
     "Regulator",
     "blockchain",
+    "chatbot",
 ]
 
 MIDDLEWARE = [
