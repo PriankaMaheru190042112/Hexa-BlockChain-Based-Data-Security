@@ -1,0 +1,211 @@
+Abstract
+Project HEXA aligns with SDG 9
+(Industry, Innovation and Infrastructure), SDG 16 (Peace, Justice and Strong Institutions) and SDG
+17 (Partnerships for the Goals) fulfilling corporate social responsibilities of accountability,
+responsibility and reputation.
+
+1.Introduction
+HEXA is a blockchain-based project that provides solutions to protect businesses from the threats
+associated with third-party data breaches and security vulnerabilities. As most businesses rely on external
+service providers and vendors, this dependency creates significant security challenges making data
+protection a top priority. Here, Project HEXA uses the transparency, immutability, and decentralized nature of
+blockchain technology to establish a robust and secure blockchain framework for business data
+safeguarding. By integrating homomorphic encryption and asymmetric cryptography in a multilayer
+architecture, HEXA guarantees sensitive information remains confidential and tamper-proof throughout its
+operations. Integration of Homomorphic encryption enables computation on encrypted data while
+maintaining its confidentiality, whereas, utilization of Asymmetric cryptography, enables secured
+communication ensuring confidentiality, integrity, authentication, and non-repudiation of data using a pair of
+related keys. However, HEXA concentrates on reducing risks from third-party service providers and suppliers,
+helping fortify businesses against security breaches, privacy violations, and unauthorized access to critical
+information.
+2. Objectives
+2.1 Specific Objectives
+Improved Data Security: Implementation of blockchain framework with homomorphic encryption and
+asymmetric cryptography to protect business data against unauthorized access and security
+breaches, ensuring confidentiality, integrity, and privacy.
+A. Self-Sovereign Identity Management: Creating a secure decentralized identity management system
+for companies to give them control over their digital identities ensuring data privacy and integrity.
+B. Efficient and Secured Computation: Using homomorphic encryption to enable secured computations
+on encrypted data, preserving confidentiality while allowing businesses to perform complex
+operations (like, sending information to analytics, marketing or Ai companies) without exposing
+sensitive information.
+C. Cost-Effective Operations: Enabling businesses to optimize their operations and reduce costs by
+leveraging efficiency, transparency, and automation as well as saving investments from the security
+bleaches.
+D. Enhanced Collaboration and Trust: Facilitating secured collaboration among business stakeholders
+through blockchain-based smart contracts and decentralized consensus mechanisms, ensuring
+trust, transparency, and efficient execution of agreements.
+2.2 Broad Objective
+2
+Utilize advanced blockchain technology, incorporating homomorphic encryption and asymmetric
+cryptography, to provide businesses with a secure and efficient platform for data privacy, management,
+communication, and collaboration. Project Hexa empowers businesses to embrace the benefits of
+blockchain technology while maintaining the highest standards of security, confidentiality, and data integrity.
+4
+To ensure the utmost privacy and security for technical/numeric data, we employ an innovative
+approach utilizing homomorphic encryption and the Hyperledger Fabric. Upon encryption using
+homomorphic encryption techniques, the data will be stored securely within the Hyperledger Fabric.
+When a party requires access to this encrypted data for analytical purposes, they are granted
+permission by the data owner. The remarkable aspect of this approach is that the party can perform
+analytical operations on the encrypted data without the need for decryption. Homomorphic
+encryption guarantees 100% effectiveness of analytical operations, preserving the high level of
+privacy and security desired by the data owner.
+B. Strategic Data (Business Logic, Logistics Data, Marketing Requirements)
+Strategic data is encrypted using asymmetric encryption and stored in IPFS. A unique cryptographic
+hash is generated for each data file and stored in Hyperledger Fabric. When a second party needs
+access to the data, they provide the uploader with the cryptographic hash. The uploader uses the
+hash to query the platform and redirect the second party to the IPFS client. The second party
+decrypts the file using their private key and proceeds with the necessary operations. The uploader
+can track all actions performed by the second party.
+The data remains confidential and controlled access is ensured. This approach offers several
+benefits, including:
+● Maximum security: The data is encrypted at all times and stored in a decentralized file
+system.
+● Immutability: The cryptographic hash ensures that the data cannot be tampered with.
+● Data validity: The cryptographic hash allows the second party to verify the authenticity of the
+data.
+● Controlled access: The uploader can track all actions performed by the second party.
+3.3.2 Process Overview
+1. Technical Data Sharing
+Encryption: Utilize homomorphic encryption to encrypt technical data (financials, client data).
+Storage: Store the encrypted data in the Hyperledger Fabric.
+Permission-based Access: Grant permission to another party based on the data owner's authorization.
+Analytical Operations: Enable the party to perform analytical operations on the encrypted data without
+decryption.
+Data Privacy and Security: Maintain high privacy and security for the data owner as the second party doesn't
+need to access the decrypted data.
+2. Strategic Data Sharing
+Encryption: Employ asymmetric encryption (RSA algorithm) to encrypt strategic data (business logic,
+logistics, marketing).
+Storage: Utilize IPFS, a decentralized file system, for secure storage of large-sized strategic data files.
+Content Identifier (CID) Generation: Generate a cryptographic hash known as Content Identifier (CID) for the
+encrypted data using IPFS.
+Hyperledger Fabric Integration: Store the generated CID in the Hyperledger Fabric. Then provide a copy of the
+CID to the data uploader.
+5
+Requesting Data: When a second party needs access to the strategic data, they request the corresponding
+CID frCID from the uploader.
+Query Creation and Redirection: The second party creates a query within the platform using the
+cryptographic hash (CID). It’ll redirect the second party to the IPFS client for further data processing.
+Tracking and Data Validity: Enable the uploader to track all movements and actions of the second party. The
+CID helps the second party verify data validity and ensure data integrity.
+Decryption and Operations: Decrypt the data file using the second party's private key. Then they’ll perform
+further operations on the decrypted data.
+Data Management: Upon completion of operations, allow the uploader to remove or re-encrypt the data
+based on their preference. It’ll ensure that the second party cannot access the data file without explicit
+permission from the uploader.
+3.4 Why Blockchain
+1. Immutability: Data shared on the blockchain network is immutable, meaning that it cannot be
+tampered with or changed without detection. This ensures data integrity and instills transparency
+and accountability among all parties involved in the data-sharing process.
+2. Removal of intermediaries: Blockchain can eliminate the need for intermediaries in data-sharing
+processes, resulting in significant cost reduction and streamlined operations.
+3. Prevention of data exploitation: Blockchain can help to track the access, usage, and modifications
+made to shared data, which can help to prevent data exploitation or privacy breaches.
+4. Increased security: The combination of IPFS and Hyperledger Fabric provides a robust foundation
+for data storage and sharing. This approach ensures that the data cannot be tampered with or
+replicated without detection.
+5. Complementing privacy-enhancing technologies: Blockchain can enhance privacy-enhancing
+technologies by providing a transparent and auditable record of data transactions.
+6. Data provenance and chain of custody: Blockchain can track the data footprint, capturing the origin,
+ownership, and journey of the shared data. This feature enables tracking and auditing of data
+throughout its lifecycle, ensuring compliance with data governance regulations and strengthening
+data governance practices.
+7. Decentralization and data sovereignty: Blockchain can provide participants with greater control over
+their data, as they can decide who can access their data. This decentralization reduces the risk of a
+single point of failure and enhances data privacy and security.
+Overall, integrating blockchain into the encrypted data sharing platform can provide a number of benefits,
+including immutability, removal of intermediaries, prevention of data exploitation, increased security, data
+provenance and chain of custody, and decentralization and data sovereignty.
+4.3 Project Hexa and competitive analysis between existing solutions
+Blockchain technology offers a high level of security due to its decentralized and immutable nature.
+Blockchain technology is designed to create trust in decentralized environments by providing transparency
+and traceability. Blockchain networks are decentralized, making them more resistant to single points of
+failure or attacks. Blockchain technology enables direct peer-to-peer interactions without the need for
+intermediaries. Blockchain technology can provide transparency and traceability, which can be beneficial for
+regulatory compliance.
+In comparison to cloud computing, blockchain technology has the following advantages:
+Security: Blockchain is more secure than cloud computing because it is decentralized and immutable.
+Trust: Blockchain is more trusted than cloud computing because it provides transparency and traceability.
+Resilience: Blockchain is more resilient than cloud computing because it is decentralized and distributed.
+Disintermediation: Blockchain enables direct peer-to-peer interactions without the need for intermediaries.
+Regulatory compliance: Blockchain can be more compliant with regulations than cloud computing because
+it provides transparency and traceability.
+Overall, blockchain technology is a more secure, trusted, resilient, and compliant alternative to cloud
+computing for storing and sharing sensitive data.
+ The potential for innovation: Blockchain is a disruptive technology that has the potential to
+revolutionize many industries. For example, blockchain could be used to create new financial
+products, improve healthcare records management, and track the movement of goods through the
+supply chain.
+Technical Architecture
+Our data sharing platform focuses on facilitating the secure exchange of two fundamental types of data
+prevalent in the business sector.
+6.1. Technical Data
+Hexa Software uses a dedicated flowchart to handle and safeguard technical data. This flowchart
+incorporates the utilization of specific encryption mechanisms, such as homomorphic encryption, and
+storage protocols, such as the Hyperledger fabric. By following this flowchart, Hexa Software ensures the
+9
+confidentiality, integrity, and seamless analysis of technical data, empowering organizations to leverage
+insights without compromising data privacy or security.The process of data handling and analysis in Hexa
+Software involves the following steps:
+Data Upload: Stakeholder companies provide data in various formats to Hexa Software. This data contains
+information relevant to the analysis and predictions.
+Encryption with Public Key: Hexa Software employs Homomorphic Encryption techniques to protect the
+confidentiality of the data. The data is encrypted using a public key, ensuring that only authorized parties
+with the corresponding private key can access and decrypt the data.
+Homomorphic Computation: The encrypted data undergoes computation using a series of Homomorphic
+Computation formulas. This computation is performed in two steps:
+Encrypted Communication: The data is processed through Homomorphic Computation formulas, preserving
+the privacy of the information while allowing for meaningful computations to be performed on the encrypted
+data.
+Differential Privacy: In this step, additional noise is introduced into the data to provide an added layer of
+privacy protection. The noise makes the data appear flawed or distorted, making it difficult for malicious
+actors or unauthorized individuals to infer sensitive information from the encrypted data.
+Encrypted Data Transmission: Once the data is prepared through Homomorphic Computation and
+differential privacy techniques, it is ready for analysis and predictions. The encrypted data is securely
+transmitted to Analytics, Marketing, and AI companies for further processing.
+Analytics and Predictions: The receiving companies, equipped with the necessary tools and capabilities,
+perform analytics and predictions on the encrypted data. The Homomorphic Encryption ensures that the
+computations and analysis can be conducted without decrypting the data, maintaining the confidentiality of
+the information.
+Result Distribution: After the analytics and predictions are completed, the resulting outcomes are generated
+in an encrypted format. These encrypted results are then sent back to the respective Stakeholder
+companies.
+Usage by Stakeholder Companies: Upon receiving the encrypted results, the Stakeholder companies can
+utilize the data for their intended purposes. They can decrypt the results using their private keys to gain
+access to the analyzed information while ensuring the security and integrity of the overall process.
+By following this process, Hexa Software combines Homomorphic Encryption, encrypted communication,
+and differential privacy techniques to safeguard sensitive data, enable secure analytics and predictions, and
+maintain the privacy of the stakeholders' information throughout the entire data handling process.
+10
+6.2. Strategic Data
+Strategic data represents descriptive information vital for business operations, encompassing elements
+such as business logic, logistics data, and marketing requirements. To address the unique characteristics
+and security requirements of strategic data, our platform leverages the dedicated flowchart of the strategic
+data channel. Within the presentation layer, users will engage with the system's interface to effortlessly
+upload and retrieve data. Moving to the business logic layer, our system employs a diversified approach to
+ensure optimal security, immutability, and data validity. To achieve this, we apply asymmetric encryption,
+11
+utilizing the robust RSA algorithm, to encrypt data files. These encrypted files are then securely stored using
+IPFS, a decentralized file system specifically chosen for its ability to handle large-scale strategic data, such
+as business logic and logistics files. As a result, IPFS generates a unique Content Identifier (CID), a
+cryptographic hash for each data file. We securely store this CID in the Hyperledger Fabric and share a copy
+with the data uploader.
+When a second party requires access to the data for subsequent operations, the uploader provides them
+with the corresponding CID. The second party then creates a query within our platform, utilizing this
+cryptographic hash, which directs them to the IPFS client for further data processing. Throughout this
+process, the uploader retains the ability to monitor and track all movements and actions undertaken by the
+second party. The CID serves as a means for the second party to verify data validity and ensure data
+integrity. Upon decryption using their private key, the second party can proceed with additional operations on
+the data. Following the completion of these operations, the uploader may choose to remove the data or
+re-encrypt it based on their individual preferences. It is important to note that the second party is unable to
+access the data file of the uploader without explicit permission.
+In the data layer, all user activities are securely stored and recorded. This multi-layer architecture
+encompasses the comprehensive process flow of our system, maintaining utmost security and ensuring
+seamless data management throughout.
+Multi-layered Architecture of Strategic Data Channel
+
+
+Quarterly Subscription Fee = 29999
+Semi Anually Subscription Fee = 53999 (10% Saving)
+Annual Subscription Fee = 95999 (20% Saving)

@@ -87,7 +87,8 @@ def analyst_register(request):
             form.save()
             uobj = User.objects.get(username=username) 
             uobj.is_analyst=1  
-            uobj.is_regulators=0                  
+            uobj.is_regulators=0 
+            uobj.is_data_owner=0                 
             uobj.save()
             return redirect('/analyst/')
     context = {'form': form }
