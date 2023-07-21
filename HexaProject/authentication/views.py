@@ -19,7 +19,7 @@ def owner_register(request):
             form.save()
             uobj = User.objects.get(username=username)           
             uobj.save()
-            return redirect('owner')
+            return redirect('/auth/OwnerLogin/')
     context = {'form': form }
     return render(request, 'OwnerRegistration.html', context)
 
@@ -57,7 +57,7 @@ def regulator_register(request):
             form.save()
             uobj = User.objects.get(username=username)           
             uobj.save()
-            return redirect('/regulator/')
+            return redirect('/auth/RegulatorLogin/')
     context = {'form': form }
     return render(request, 'Regulator/RegulatorRegistration.html',context)
 
@@ -90,7 +90,7 @@ def analyst_register(request):
             uobj.is_regulators=0 
             uobj.is_data_owner=0                 
             uobj.save()
-            return redirect('/analyst/')
+            return redirect('/auth/AnalystLogin/')
     context = {'form': form }
     return render(request, 'Analyst/AnalystRegistration.html',context)
 

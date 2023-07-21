@@ -103,18 +103,24 @@
                         <td><i id="eyeIcon_{{ forloop.counter }}" class="fas fa-eye toggle-icon"></i></td>
 
                         <script>
-                            
-                            const keyField = document.getElementById('key_'+{{ forloop.counter }});
-                            const starField= document.getElementById('star_'+{{ forloop.counter }});
-                            const eyeIcon = document.getElementById('eyeIcon_'+{{ forloop.counter }});
-                            
-                            eyeIcon.addEventListener('click', function() {
-                                 if(keyField.style.display= 'none'){
-                                    starField.style.display='none'
-                                    keyField.style.display= 'block'
-                                 }
-                            });
-                         </script> 
+                          function addToggleListener(counter) {
+                              const keyField = document.getElementById('key_'+ counter);
+                              const starField = document.getElementById('star_'+ counter);
+                              const eyeIcon = document.getElementById('eyeIcon_'+ counter);
+                              
+                              eyeIcon.addEventListener('click', function() {
+                                  if (keyField.style.display === 'none') {
+                                      starField.style.display = 'none';
+                                      keyField.style.display = 'block';
+                                  }
+                              });
+                          }
+                      
+                          {% for document in documents %}
+                              addToggleListener({{ forloop.counter }});
+                          {% endfor %}
+                      </script>
+                      
 
                     </tr>
 

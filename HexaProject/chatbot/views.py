@@ -3,7 +3,7 @@ from django.http import JsonResponse
 import openai
 
 # Set your OpenAI API key
-openai.api_key = "Your API key here"
+openai.api_key = "Your api key"
 
 # Function to get the chatbot's response using OpenAI API
 def get_chatbot_response(user_message, conversation):
